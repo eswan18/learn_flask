@@ -23,3 +23,8 @@ COPY . /home/flask/app/
 RUN chown -R flask:flaskgroup /home/flask
  
 USER flask
+ENV FLASK_APP=app.py
+#ENV FLASK_DEBUG=1
+EXPOSE 5000
+
+CMD ["python3", "app.py"]
